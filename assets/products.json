@@ -14,16 +14,16 @@
     {"id":"berry-fusion","name":"Berry Fusion","tag":"Coming soon","price":0,"weight":0,"description":"A bright new blend is in the works. Watch this space.","ingredients":"Recipe coming soon","comingSoon":true}
   ],
   "ingredients": [
-    {"id":"cashew","name":"Cashews","pricePerKg":949,"unit":"piece","unitWeightG":1.25,"proteinPer100g":18,"icon":"◒","image":"assets/images/cashew.jpg"},
-    {"id":"almond","name":"Almonds","pricePerKg":989,"unit":"piece","unitWeightG":1.25,"proteinPer100g":21,"icon":"◓","image":"assets/images/almond.jpg"},
-    {"id":"walnut","name":"Walnuts","pricePerKg":1549,"unit":"piece","unitWeightG":4,"proteinPer100g":15,"icon":"◔","image":"assets/images/walnut.jpg"},
-    {"id":"anjeer","name":"Anjeer","pricePerKg":849,"unit":"piece","unitWeightG":9,"proteinPer100g":3,"icon":"◉","image":"assets/images/anjeer.jpg"},
-    {"id":"pista","name":"Pista, unsalted","pricePerKg":2649,"unit":"piece","unitWeightG":1,"proteinPer100g":20,"icon":"◌","image":"assets/images/pista.jpg"},
-    {"id":"black-kismiss","name":"Black raisins","pricePerKg":549,"unit":"piece","unitWeightG":1,"proteinPer100g":3,"icon":"●","image":"assets/images/black-raisins.jpg"},
-    {"id":"sunflower","name":"Sunflower seeds","pricePerKg":299,"unit":"grams","unitWeightG":5,"proteinPer100g":21,"icon":"✦","image":"assets/images/sunflower-seeds.jpg"},
-    {"id":"pumpkin","name":"Pumpkin seeds","pricePerKg":549,"unit":"grams","unitWeightG":5,"proteinPer100g":30,"icon":"◆","image":"assets/images/pumpkin-seeds.jpg"},
-    {"id":"flax","name":"Flax seeds","pricePerKg":249,"unit":"grams","unitWeightG":5,"proteinPer100g":18,"icon":"✧","image":"assets/images/flax-seeds.jpg"},
-    {"id":"chia","name":"Chia seeds","pricePerKg":419,"unit":"grams","unitWeightG":5,"proteinPer100g":17,"icon":"✺","image":"assets/images/chia-seeds.jpg"},
-    {"id":"melon","name":"Melon seeds","pricePerKg":699,"unit":"grams","unitWeightG":5,"proteinPer100g":28,"icon":"✦","image":"assets/images/melon-seeds.jpg"}
+    {"id":"cashew","name":"Cashews","pricePerKg":949,"unit":"piece","unitWeightG":1.25,"proteinPer100g":18,"icon":"◒","image":"assets/images/cashew.jpg.jpeg"},
+    {"id":"almond","name":"Almonds","pricePerKg":989,"unit":"piece","unitWeightG":1.25,"proteinPer100g":21,"icon":"◓","image":"assets/images/almond.jpg.jpeg"},
+    {"id":"walnut","name":"Walnuts","pricePerKg":1549,"unit":"piece","unitWeightG":4,"proteinPer100g":15,"icon":"◔","image":"assets/images/walnut.jpg.jpeg"},
+    {"id":"anjeer","name":"Anjeer","pricePerKg":849,"unit":"piece","unitWeightG":9,"proteinPer100g":3,"icon":"◉","image":"assets/images/anjeer.jpg.jpeg"},
+    {"id":"pista","name":"Pista, unsalted","pricePerKg":2649,"unit":"piece","unitWeightG":1,"proteinPer100g":20,"icon":"◌","image":"assets/images/pista.jpg.jpeg"},
+    {"id":"black-kismiss","name":"Black raisins","pricePerKg":549,"unit":"piece","unitWeightG":1,"proteinPer100g":3,"icon":"●","image":"assets/images/black-raisins.jpg.jpeg"},
+    {"id":"sunflower","name":"Sunflower seeds","pricePerKg":299,"unit":"grams","unitWeightG":5,"proteinPer100g":21,"icon":"✦","image":"assets/images/sunflower-seeds.jpg.jpeg"},
+    {"id":"pumpkin","name":"Pumpkin seeds","pricePerKg":549,"unit":"grams","unitWeightG":5,"proteinPer100g":30,"icon":"◆","image":"assets/images/pumpkin-seeds.jpg.jpeg"},
+    {"id":"flax","name":"Flax seeds","pricePerKg":249,"unit":"grams","unitWeightG":5,"proteinPer100g":18,"icon":"✧","image":"assets/images/flax-seeds.jpg.jpeg"},
+    {"id":"chia","name":"Chia seeds","pricePerKg":419,"unit":"grams","unitWeightG":5,"proteinPer100g":17,"icon":"✺","image":"assets/images/chia-seeds.jpg.jpeg"},
+    {"id":"melon","name":"Melon seeds","pricePerKg":699,"unit":"grams","unitWeightG":5,"proteinPer100g":28,"icon":"✦","image":"assets/images/melon-seeds.jpg.jpeg"}
   ]
 }
