@@ -3,8 +3,8 @@
     "name": "EverBite",
     "whatsappNumber": "917981951987",
     "currency": "INR",
-    "customMixMarkup": 1.2,
-    "minimumCustomMixGrams": 250,
+    "customMixMarkup": 1.18,
+    "minimumCustomMixGrams": 0,
     "customMixStepGrams": 5
   },
   "featuredMixes": [
