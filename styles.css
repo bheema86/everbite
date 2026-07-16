@@ -27,3 +27,33 @@
   :root .count-control{justify-content:flex-end!important}
   :root .count-control button{width:40px!important;height:40px!important;border-radius:50%!important}
 }
+
+/* EverBite identity, footer and privacy information */
+:root{--cream:#fff5e6;--sand:#f3e5cf}
+:root .site-header{background:rgba(255,245,230,.96)!important}
+.brand-logo{width:205px;height:76px;display:block;overflow:hidden;flex:0 0 auto}
+.brand-logo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#fff5e6}
+.privacy-section{display:grid;grid-template-columns:minmax(250px,.8fr) minmax(0,1.2fr);gap:clamp(35px,8vw,120px);padding:100px clamp(22px,7vw,108px);background:#f7eddd;border-top:1px solid #ecdbc1}
+.privacy-intro h2{font-size:clamp(40px,4.5vw,64px);margin:14px 0}.privacy-intro>p:last-child{font-size:12px;letter-spacing:.8px;color:var(--muted);text-transform:uppercase}.privacy-content{max-width:720px}.privacy-content>p{font-size:16px;line-height:1.7;color:#5d5547}.privacy-content h3{font-size:22px;margin:26px 0 7px}.privacy-content h3+p{font-size:14px;line-height:1.7;color:#625a4b}.privacy-content a{color:var(--wine);font-weight:700}
+footer{display:grid!important;grid-template-columns:1.25fr .7fr .9fr;gap:45px;padding:48px max(5vw,22px)!important;background:#4b1d27!important;align-items:start!important}footer h3{margin:0 0 14px;font:600 20px "Playfair Display",serif;color:#d9b66e}.footer-brand p,.footer-contact p{max-width:310px;margin:15px 0 0!important;color:#f0ddbf!important;font-size:13px!important;line-height:1.6}.footer-logo{display:block;width:205px;height:205px;overflow:hidden;border-radius:4px;background:#fff5e6}.footer-logo img{width:100%;height:100%;display:block;object-fit:contain;object-position:center}.footer-links,.footer-contact{display:flex;flex-direction:column;align-items:flex-start;gap:9px}.footer-links a,.footer-contact a{color:#f3dfbf;text-decoration:none;font-size:14px}.footer-links a:hover,.footer-contact a:hover{text-decoration:underline}.footer-contact p{margin-top:16px!important;font-size:11px!important;color:#c8ab8d!important}.delete-item{width:auto!important;height:auto!important;min-height:30px!important;padding:4px 8px!important;border-radius:999px!important;font:700 11px "DM Sans",sans-serif!important;text-decoration:underline!important;background:transparent!important;border:0!important;color:#7d3d43!important;box-shadow:none!important}
+@media(max-width:680px){.brand-logo{width:184px!important;height:70px!important}.privacy-section{grid-template-columns:1fr;padding:65px 25px;gap:22px}.privacy-content>p{font-size:15px}footer{grid-template-columns:1fr!important;gap:30px!important;padding:40px 25px!important}.footer-logo{width:190px;height:190px}.footer-brand p{margin-top:12px!important}.footer-links,.footer-contact{gap:8px}}
+
+/* Give the complete square logo enough room to remain legible without cropping it. */
+:root .site-header{height:132px!important}
+:root .brand-logo{width:128px!important;height:118px!important}
+@media(max-width:680px){:root .site-header{height:118px!important}:root .brand-logo{width:116px!important;height:106px!important}:root .main-nav{top:118px!important}}
+
+/* Keep product controls visually centred and leave breathing room beside pack CTAs. */
+:root .count-control,:root .cart-quantity{align-items:center!important}
+:root .count-control button,:root .cart-quantity button{display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:0!important;line-height:1!important}
+:root .product-card .purchase-area,:root .mix-card .purchase-area{min-height:48px!important;align-items:center!important}
+:root .mix-card .purchase-area{padding-right:10px!important}
+:root .mix-card .purchase-area .add-button{margin-right:2px!important}
+@media(max-width:680px){:root .mix-card .purchase-area{padding-right:0!important}:root .mix-card .purchase-area .add-button{margin-right:0!important}}
+
+/* Pack controls should size to their content rather than pushing the CTA into the card edge. */
+@media(min-width:681px){
+  :root .mix-card .purchase-area{display:flex!important;justify-content:flex-start!important;gap:14px!important;padding-right:14px!important}
+  :root .mix-card .purchase-area .count-control{flex:0 0 auto!important}
+  :root .mix-card .purchase-area .add-button{flex:0 0 auto!important;width:auto!important;justify-self:auto!important;margin:0!important;padding:10px 13px!important}
+}

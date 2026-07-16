@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#home" aria-label="EverBite home"><span>e</span>verBite<small>better bites, every day</small></a>
+      <a class="brand brand-logo" href="#home" aria-label="EverBite home"><img src="assets/images/everbite-logo.jpeg" alt="EverBite — Daily Dose of Wellness" /></a>
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#home">Home</a><a href="#products">Products</a><a href="#custom-mix">Custom Mix</a><a href="#about">About</a><a href="#contact">Contact</a>
@@ -60,12 +60,26 @@
       </section>
 
       <section id="about" class="about-section"><div><p class="eyebrow">ABOUT EVERBITE</p><h2>Snack with<br /><em>intention.</em></h2></div><p>EverBite brings together everyday ingredients in portions that make healthy choices feel easy. No complicated rules—just an honest, satisfying bite when you need it.</p></section>
+      <section id="privacy" class="privacy-section" aria-labelledby="privacy-title">
+        <div class="privacy-intro"><p class="eyebrow">YOUR PRIVACY</p><h2 id="privacy-title">Privacy, kept<br /><em>simple.</em></h2><p>Last updated: 16 July 2026</p></div>
+        <div class="privacy-content">
+          <p>EverBite respects your privacy. This policy explains how we handle information when you browse our website or contact us to place an order.</p>
+          <h3>What we collect</h3><p>When you contact us through WhatsApp, email or phone, you may share your name, contact details, delivery address and order preferences.</p>
+          <h3>How we use it</h3><p>We use this information only to respond to you, prepare and deliver your order, provide customer support, and improve our products and service.</p>
+          <h3>Sharing and security</h3><p>We do not sell your personal information. We share it only when needed to fulfil an order or where required by law. Please do not share payment or other sensitive details unless requested through an agreed ordering method.</p>
+          <h3>Your choices</h3><p>You may ask us to update or delete the information you have shared with us. For privacy questions, contact <a href="mailto:everbite.co.in@gmail.com">everbite.co.in@gmail.com</a>.</p>
+        </div>
+      </section>
       <section id="contact" class="contact-section"><p class="eyebrow">LET'S TALK</p><h2>Have a bulk order<br />or a question?</h2><a class="button button-dark whatsapp-link" href="#">Chat on WhatsApp</a></section>
     </main>
 
-    <aside class="cart-drawer" aria-label="Shopping bag" aria-hidden="true"><div class="cart-header"><h2>Your bag</h2><button class="close-cart" aria-label="Close cart">×</button></div><div id="cart-items" class="cart-items"></div><div class="cart-footer"><div><span>Total</span><strong id="cart-total">₹0</strong></div><button id="whatsapp-order" class="button button-dark">Order on WhatsApp ↗</button><small>Order details will open in WhatsApp. Update the number in <code>assets/products.json</code> before launch.</small></div></aside>
+    <aside class="cart-drawer" aria-label="Shopping bag" aria-hidden="true"><div class="cart-header"><h2>Your bag</h2><button class="close-cart" aria-label="Close cart">×</button></div><div id="cart-items" class="cart-items"></div><div class="cart-footer"><div><span>Total</span><strong id="cart-total">₹0</strong></div><button id="whatsapp-order" class="button button-dark">Order on WhatsApp ↗</button><small>Your order details will open in WhatsApp for confirmation.</small></div></aside>
     <div class="backdrop"></div>
-    <footer><a class="brand" href="#home"><span>e</span>verBite</a><p>Better bites, every day.</p><p>© <span id="year"></span> EverBite</p></footer>
+    <footer>
+      <div class="footer-brand"><a class="footer-logo" href="#home"><img src="assets/images/everbite-logo.jpeg" alt="EverBite — Daily Dose of Wellness" /></a><p>Wholesome nuts, fruits and seeds for a better everyday ritual.</p></div>
+      <div class="footer-links"><h3>Quick links</h3><a href="#products">Shop all</a><a href="#privacy">Privacy Policy</a><a href="#custom-mix">Custom Mix</a><a href="#contact">Contact us</a></div>
+      <div class="footer-contact"><h3>Contact</h3><a href="mailto:everbite.co.in@gmail.com">everbite.co.in@gmail.com</a><a href="tel:+917981951987">+91 79819 51987</a><p>© <span id="year"></span> EverBite. All rights reserved.</p></div>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
