@@ -60,3 +60,7 @@ footer{display:grid!important;grid-template-columns:1.25fr .7fr .9fr;gap:45px;pa
 
 .mixer-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}.reset-mix{border:0;background:transparent;color:var(--wine);padding:10px 4px;font:700 12px "DM Sans",sans-serif;text-decoration:underline;cursor:pointer;white-space:nowrap}.reset-mix:disabled{opacity:.38;cursor:not-allowed;text-decoration:none}.mixer-actions .custom-buy-actions{width:auto!important}.mixer-actions .button{white-space:nowrap}
 @media(max-width:680px){.mixer-actions{width:100%;justify-content:flex-end}.mixer-actions .custom-buy-actions{width:auto!important}.mixer-actions .button{width:auto!important}}
+
+/* Ordering policy and first-order offer. */
+.order-benefits{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:13px;margin:26px auto 34px;color:var(--wine);font-size:13px;font-weight:700;letter-spacing:.2px;text-align:center}.order-benefits i{width:5px;height:5px;border-radius:50%;background:#d2ab58}.cart-order-note{margin:0 0 14px;color:var(--wine);font-size:14px;font-weight:700;line-height:1.5}.cart-footer .button:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:680px){.order-benefits{margin:22px auto 28px;gap:8px;font-size:12px;line-height:1.45}.order-benefits i{display:none}.order-benefits span{width:100%}.cart-order-note{font-size:14px;line-height:1.55}}

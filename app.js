@@ -4,7 +4,11 @@ const money = value => new Intl.NumberFormat('en-IN',{style:'currency',currency:
 
 async function initialise(){
   data = await (await fetch('assets/products.json')).json();
+  byId('whatsapp-order').insertAdjacentHTML('beforebegin','<p id="cart-order-note" class="cart-order-note">Minimum order ₹499. Shipping charges applicable.</p>');
   data.ingredients.forEach(item => mixSelections[item.id] = 0);
+  // Preselect a sensible starting quantity without placing anything in the bag.
+  data.featuredMixes.filter(item => !item.comingSoon).forEach(item => productSelections[item.id] = {quantity:1});
+  data.ingredients.forEach(item => productSelections[`single:${item.id}`] = {size:250,quantity:1});
   document.querySelector('.hero-actions .button').textContent = 'Shop now';
   document.querySelector('.catalogue-heading')?.remove();
   document.querySelector('.minimum-note').textContent = 'Add any ingredients you like. Your total weight and price update as you build.';
@@ -47,6 +51,24 @@ function addToCart(item,quantity){ if(!quantity||quantity<1)return; const curren
 function renderCart(){ const total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0);document.querySelector('.cart-count').textContent=cart.reduce((sum,item)=>sum+item.quantity,0);byId('cart-total').textContent=money(total);byId('cart-items').innerHTML=cart.length?cart.map((item,index)=>`<article class="cart-item"><div><h3>${item.name}</h3><p>${item.detail}</p><div class="cart-quantity"><button data-cart="-1" data-index="${index}">−</button><strong>${item.quantity}</strong><button data-cart="1" data-index="${index}">+</button></div></div><div><strong>${money(item.price*item.quantity)}</strong><button class="delete-item" data-delete="${index}" aria-label="Remove ${item.name}">Remove</button></div></article>`).join(''):'<p class="empty-cart">Your bag is waiting for a better bite.</p>';document.querySelectorAll('[data-cart]').forEach(button=>button.addEventListener('click',()=>{const index=Number(button.dataset.index);cart[index].quantity+=Number(button.dataset.cart);if(cart[index].quantity<1)cart.splice(index,1);renderCart();}));document.querySelectorAll('[data-delete]').forEach(button=>button.addEventListener('click',()=>{cart.splice(Number(button.dataset.delete),1);renderCart();})); }
 function showToast(message){let toast=document.querySelector('.bag-toast');if(!toast){toast=document.createElement('div');toast.className='bag-toast';document.body.append(toast);}toast.textContent=`✓ ${message}`;toast.classList.add('show');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>toast.classList.remove('show'),2400);}
 function openCart(){document.querySelector('.cart-drawer').classList.add('open');document.querySelector('.backdrop').classList.add('open');}function closeCart(){document.querySelector('.cart-drawer').classList.remove('open');document.querySelector('.backdrop').classList.remove('open');}
-function orderWhatsApp(){if(!cart.length)return;const total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0),lines=cart.map(item=>`• ${item.name} (${item.detail}) × ${item.quantity} — ${money(item.price*item.quantity)}`).join('\n'),text=`Hello ${data.store.name}! I would like to place an order:\n\n${lines}\n\n*Total: ${money(total)}*`;window.open(`https://wa.me/${data.store.whatsappNumber}?text=${encodeURIComponent(text)}`,'_blank','noopener');}
 function bindInterface(){document.querySelector('.cart-button').addEventListener('click',openCart);document.querySelector('.close-cart').addEventListener('click',closeCart);document.querySelector('.backdrop').addEventListener('click',closeCart);byId('whatsapp-order').addEventListener('click',orderWhatsApp);document.querySelector('.whatsapp-link').addEventListener('click',event=>{event.preventDefault();window.open(`https://wa.me/${data.store.whatsappNumber}`,'_blank','noopener');});const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('.main-nav');menu.addEventListener('click',()=>{nav.classList.toggle('open');menu.setAttribute('aria-expanded',nav.classList.contains('open'));});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>nav.classList.remove('open')));}
+function renderCart(){
+  const total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0), minimumOrder=499, freebieOrder=999, orderButton=byId('whatsapp-order'), orderNote=byId('cart-order-note');
+  document.querySelector('.cart-count').textContent=cart.reduce((sum,item)=>sum+item.quantity,0);
+  byId('cart-total').textContent=money(total);
+  orderButton.disabled=!cart.length;
+  if(!cart.length)orderNote.textContent='Minimum order ₹499. Shipping charges applicable.';
+  else if(total<minimumOrder)orderNote.textContent=`Add ${money(minimumOrder-total)} more to place your order. Minimum order ₹499.`;
+  else if(total>=freebieOrder)orderNote.textContent='Eligible for a free one-day trial pack on your first order. Shipping charges applicable.';
+  else orderNote.textContent='Minimum order met. Shipping charges applicable.';
+  byId('cart-items').innerHTML=cart.length?cart.map((item,index)=>`<article class="cart-item"><div><h3>${item.name}</h3><p>${item.detail}</p><div class="cart-quantity"><button data-cart="-1" data-index="${index}">−</button><strong>${item.quantity}</strong><button data-cart="1" data-index="${index}">+</button></div></div><div><strong>${money(item.price*item.quantity)}</strong><button class="delete-item" data-delete="${index}" aria-label="Remove ${item.name}">Remove</button></div></article>`).join(''):'<p class="empty-cart">Your bag is waiting for a better bite.</p>';
+  document.querySelectorAll('[data-cart]').forEach(button=>button.addEventListener('click',()=>{const index=Number(button.dataset.index);cart[index].quantity+=Number(button.dataset.cart);if(cart[index].quantity<1)cart.splice(index,1);renderCart();}));
+  document.querySelectorAll('[data-delete]').forEach(button=>button.addEventListener('click',()=>{cart.splice(Number(button.dataset.delete),1);renderCart();}));
+}
+function orderWhatsApp(){
+  const total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0);
+  if(!cart.length)return;
+  const lines=cart.map(item=>`• ${item.name} (${item.detail}) × ${item.quantity} — ${money(item.price*item.quantity)}`).join('\n'), freebieNote=total>=999?'\n\n*Freebie:* Please include the free one-day trial pack if this is my first order.':'', text=`Hello ${data.store.name}! I would like to place an order:\n\n${lines}\n\n*Total: ${money(total)}*\nShipping charges applicable.${freebieNote}`;
+  window.open(`https://wa.me/${data.store.whatsappNumber}?text=${encodeURIComponent(text)}`,'_blank','noopener');
+}
 initialise().catch(error=>{console.error(error);document.body.insertAdjacentHTML('afterbegin','<p style="padding:20px">Could not load product data. Please run this folder through a local server.</p>');});
