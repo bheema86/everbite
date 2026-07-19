@@ -1,86 +1,180 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="EverBite — thoughtfully crafted everyday nutrition." />
-    <title>EverBite | Power in every bite</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand brand-logo" href="#home" aria-label="EverBite home"><img src="assets/images/everbite-logo.jpeg" alt="EverBite — Daily Dose of Wellness" /></a>
-      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#home">Home</a><a href="#products">Products</a><a href="#custom-mix">Custom Mix</a><a href="#about">About</a><a href="#contact">Contact</a>
-      </nav>
-      <button class="cart-button" aria-label="Open cart">Bag <span class="cart-count">0</span></button>
-    </header>
 
-    <main>
-      <section id="home" class="hero hero-centred">
-        <div class="hero-fall hero-fall-left" aria-hidden="true">
-          <i class="nut almond a1"></i><i class="nut almond a2"></i><i class="nut cashew c1"></i><i class="nut cashew c2"></i><i class="nut walnut w1"></i><i class="nut pista p1"></i><i class="seed s1"></i><i class="seed s2"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EverBite — thoughtfully crafted everyday nutrition." />
+  <title>EverBite | Power in every bite</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand brand-logo" href="#home" aria-label="EverBite home"><img src="assets/images/everbite-logo.jpeg"
+        alt="EverBite — Daily Dose of Wellness" /></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#products">Products</a><a href="#custom-mix">Custom Mix</a><a
+        href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" aria-label="Open cart">Bag <span class="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section id="home" class="hero hero-centred">
+      <div class="hero-fall hero-fall-left" aria-hidden="true">
+        <i class="nut almond a1"></i><i class="nut almond a2"></i><i class="nut cashew c1"></i><i
+          class="nut cashew c2"></i><i class="nut walnut w1"></i><i class="nut pista p1"></i><i class="seed s1"></i><i
+          class="seed s2"></i>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">THE EVERYDAY RITUAL</p>
+        <h1>Smart daily nutrition. Sorted for <em>7 or 30 days.</em></h1>
+        <p class="lead">Portioned nuts, fruits and seeds for everyday energy. Pick a signature blend or build your own
+          custom mix today.</p>
+        <div class="daily-pack-mockup">
+          <img src="assets/images/daily-pack.png" alt="EverBite Daily Pack" class="daily-pack-image">
         </div>
-        <div class="hero-copy">
-          <p class="eyebrow">THE EVERYDAY RITUAL</p>
-          <h1>Goodness that<br /><em>keeps up with you.</em></h1>
-          <p class="lead">Wholesome nuts, fruits and seeds—thoughtfully portioned for every kind of day.</p>
-          <div class="hero-actions"><a class="button button-dark" href="#products">Shop mixes</a><a class="text-link" href="#custom-mix">Create your own mix <span>→</span></a></div>
+        <div class="hero-actions"><a class="button button-dark" href="#products">Shop daily packs</a><a
+            class="text-link" href="#custom-mix">Build custom pack <span>→</span></a></div>
+      </div>
+      <div class="hero-fall hero-fall-right" aria-label="A slow cascade of dry fruits and seeds">
+        <i class="nut almond a1"></i><i class="nut almond a2"></i><i class="nut almond a3"></i><i
+          class="nut almond a4"></i>
+        <i class="nut cashew c1"></i><i class="nut cashew c2"></i><i class="nut cashew c3"></i>
+        <i class="nut walnut w1"></i><i class="nut walnut w2"></i><i class="nut walnut w3"></i>
+        <i class="nut pista p1"></i><i class="nut pista p2"></i><i class="nut pista p3"></i>
+        <i class="seed s1"></i><i class="seed s2"></i><i class="seed s3"></i><i class="seed s4"></i><i
+          class="seed s5"></i>
+      </div>
+    </section>
+
+    <section class="home-steps" aria-label="How EverBite works">
+      <article><span>01</span><strong>Choose your mix</strong></article>
+      <article><span>02</span><strong>Soak overnight or enjoy as preferred</strong></article>
+      <article><span>03</span><strong>Take one pack daily</strong></article>
+    </section>
+
+    <section class="intro-strip"><span>7-day boxes</span><i></i><span>30-day boxes</span><i></i><span>Custom
+        mixes</span><i></i><span>Soak overnight</span></section>
+
+    <section id="products" class="section products-section">
+      <div class="section-heading">
+        <p class="eyebrow">THE EVERBITE COLLECTION</p>
+        <h2>Small packs. <em>Big energy.</em></h2>
+        <p>Purposeful blends and pantry essentials for a naturally better snack.</p>
+      </div>
+      <div class="order-benefits" aria-label="Order information"><span>Minimum order ₹499</span><i></i><span>Shipping
+          charges applicable</span><i></i><span>First order above ₹999? Free one-day trial pack</span></div>
+      <div id="featured-products" class="featured-grid" aria-live="polite"></div>
+      <div class="catalogue-heading">
+        <h3>Pantry essentials</h3>
+        <p>Shop your favourites, simply and honestly.</p>
+      </div>
+      <div id="single-products" class="product-grid"></div>
+    </section>
+
+    <section id="custom-mix" class="custom-section">
+      <div class="custom-intro">
+        <p class="eyebrow">YOUR MIX. YOUR WAY.</p>
+        <h2>Build a bite<br /><em>that is yours.</em></h2>
+        <p>Choose your ingredients and quantities. Your price updates as you build.</p>
+        <div class="mix-bag">EVER<br />BITE <span>custom<br />blend</span></div>
+      </div>
+      <div class="mixer-card">
+        <div class="mixer-top">
+          <div>
+            <p class="step">01 — PICK YOUR INGREDIENTS</p>
+            <h3>Make your mix</h3>
+          </div>
+          <p class="mix-total"><span>Total weight</span><strong id="mix-weight">0 g</strong></p>
         </div>
-        <div class="hero-fall hero-fall-right" aria-label="A slow cascade of dry fruits and seeds">
-          <i class="nut almond a1"></i><i class="nut almond a2"></i><i class="nut almond a3"></i><i class="nut almond a4"></i>
-          <i class="nut cashew c1"></i><i class="nut cashew c2"></i><i class="nut cashew c3"></i>
-          <i class="nut walnut w1"></i><i class="nut walnut w2"></i><i class="nut walnut w3"></i>
-          <i class="nut pista p1"></i><i class="nut pista p2"></i><i class="nut pista p3"></i>
-          <i class="seed s1"></i><i class="seed s2"></i><i class="seed s3"></i><i class="seed s4"></i><i class="seed s5"></i>
+        <div id="mixer-ingredients" class="ingredient-list"></div>
+        <div class="mixer-footer">
+          <div><span>Your custom mix</span><strong id="mix-price">₹0</strong><small id="mix-protein">0.0 g
+              protein</small><small>Calculated from selected ingredients</small></div>
+          <div class="mixer-actions"><button id="reset-custom-mix" class="reset-mix" type="button" disabled>Reset
+              mix</button><button id="add-custom-mix" class="button button-gold" disabled>Add mix to bag</button></div>
         </div>
-      </section>
+        <p class="minimum-note">Minimum custom mix: 250 g. Nuts are added by piece; seeds in 5 g portions. Use × to
+          remove an ingredient.</p>
+      </div>
+    </section>
 
-      <section class="intro-strip"><span>100% real ingredients</span><i></i><span>Nothing unnecessary</span><i></i><span>Made for everyday energy</span></section>
+    <section id="about" class="about-section">
+      <div>
+        <p class="eyebrow">ABOUT EVERBITE</p>
+        <h2>Snack with<br /><em>intention.</em></h2>
+      </div>
+      <p>EverBite brings together everyday ingredients in portions that make healthy choices feel easy. No complicated
+        rules—just an honest, satisfying bite when you need it.</p>
+    </section>
+    <section id="privacy" class="privacy-section" aria-labelledby="privacy-title">
+      <div class="privacy-intro">
+        <p class="eyebrow">YOUR PRIVACY</p>
+        <h2 id="privacy-title">Privacy, kept<br /><em>simple.</em></h2>
+        <p>Last updated: 16 July 2026</p>
+      </div>
+      <div class="privacy-content">
+        <p>EverBite respects your privacy. This policy explains how we handle information when you browse our website or
+          contact us to place an order.</p>
+        <h3>What we collect</h3>
+        <p>When you contact us through WhatsApp, email or phone, you may share your name, contact details, delivery
+          address and order preferences.</p>
+        <h3>How we use it</h3>
+        <p>We use this information only to respond to you, prepare and deliver your order, provide customer support, and
+          improve our products and service.</p>
+        <h3>Sharing and security</h3>
+        <p>We do not sell your personal information. We share it only when needed to fulfil an order or where required
+          by law. Please do not share payment or other sensitive details unless requested through an agreed ordering
+          method.</p>
+        <h3>Your choices</h3>
+        <p>You may ask us to update or delete the information you have shared with us. For privacy questions, contact <a
+            href="mailto:everbite.co.in@gmail.com">everbite.co.in@gmail.com</a>.</p>
+      </div>
+    </section>
+    <section id="contact" class="contact-section">
+      <p class="eyebrow">LET'S TALK</p>
+      <h2>Have a bulk order<br />or a question?</h2><a class="button button-dark whatsapp-link" href="#">Chat on
+        WhatsApp</a>
+    </section>
+  </main>
 
-      <section id="products" class="section products-section">
-        <div class="section-heading"><p class="eyebrow">THE EVERBITE COLLECTION</p><h2>Small packs. <em>Big energy.</em></h2><p>Purposeful blends and pantry essentials for a naturally better snack.</p></div>
-        <div class="order-benefits" aria-label="Order information"><span>Minimum order ₹499</span><i></i><span>Shipping charges applicable</span><i></i><span>First order above ₹999? Free one-day trial pack</span></div>
-        <div id="featured-products" class="featured-grid" aria-live="polite"></div>
-        <div class="catalogue-heading"><h3>Pantry essentials</h3><p>Shop your favourites, simply and honestly.</p></div>
-        <div id="single-products" class="product-grid"></div>
-      </section>
+  <aside class="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Your bag</h2><button class="close-cart" aria-label="Close cart">×</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div><span>Total</span><strong id="cart-total">₹0</strong></div><button id="whatsapp-order"
+        class="button button-dark">Order on WhatsApp ↗</button><small>Your order details will open in WhatsApp for
+        confirmation.</small>
+    </div>
+  </aside>
+  <div class="backdrop"></div>
+  <footer>
+    <div class="footer-brand"><a class="footer-logo" href="#home"><img src="assets/images/everbite-logo.jpeg"
+          alt="EverBite — Daily Dose of Wellness" /></a>
+      <p>Wholesome nuts, fruits and seeds for a better everyday ritual.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick links</h3><a href="#products">Shop all</a><a href="#privacy">Privacy Policy</a><a
+        href="#custom-mix">Custom Mix</a><a href="#contact">Contact us</a>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact</h3><a href="mailto:everbite.co.in@gmail.com">everbite.co.in@gmail.com</a><a
+        href="tel:+917981951987">+91 79819 51987</a>
+      <p>© <span id="year"></span> EverBite. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
 
-      <section id="custom-mix" class="custom-section">
-        <div class="custom-intro"><p class="eyebrow">YOUR MIX. YOUR WAY.</p><h2>Build a bite<br /><em>that is yours.</em></h2><p>Choose your ingredients and quantities. Your price updates as you build.</p><div class="mix-bag">EVER<br />BITE <span>custom<br />blend</span></div></div>
-        <div class="mixer-card">
-          <div class="mixer-top"><div><p class="step">01 — PICK YOUR INGREDIENTS</p><h3>Make your mix</h3></div><p class="mix-total"><span>Total weight</span><strong id="mix-weight">0 g</strong></p></div>
-          <div id="mixer-ingredients" class="ingredient-list"></div>
-          <div class="mixer-footer"><div><span>Your custom mix</span><strong id="mix-price">₹0</strong><small id="mix-protein">0.0 g protein</small><small>Calculated from selected ingredients</small></div><div class="mixer-actions"><button id="reset-custom-mix" class="reset-mix" type="button" disabled>Reset mix</button><button id="add-custom-mix" class="button button-gold" disabled>Add mix to bag</button></div></div>
-          <p class="minimum-note">Minimum custom mix: 250 g. Nuts are added by piece; seeds in 5 g portions. Use × to remove an ingredient.</p>
-        </div>
-      </section>
-
-      <section id="about" class="about-section"><div><p class="eyebrow">ABOUT EVERBITE</p><h2>Snack with<br /><em>intention.</em></h2></div><p>EverBite brings together everyday ingredients in portions that make healthy choices feel easy. No complicated rules—just an honest, satisfying bite when you need it.</p></section>
-      <section id="privacy" class="privacy-section" aria-labelledby="privacy-title">
-        <div class="privacy-intro"><p class="eyebrow">YOUR PRIVACY</p><h2 id="privacy-title">Privacy, kept<br /><em>simple.</em></h2><p>Last updated: 16 July 2026</p></div>
-        <div class="privacy-content">
-          <p>EverBite respects your privacy. This policy explains how we handle information when you browse our website or contact us to place an order.</p>
-          <h3>What we collect</h3><p>When you contact us through WhatsApp, email or phone, you may share your name, contact details, delivery address and order preferences.</p>
-          <h3>How we use it</h3><p>We use this information only to respond to you, prepare and deliver your order, provide customer support, and improve our products and service.</p>
-          <h3>Sharing and security</h3><p>We do not sell your personal information. We share it only when needed to fulfil an order or where required by law. Please do not share payment or other sensitive details unless requested through an agreed ordering method.</p>
-          <h3>Your choices</h3><p>You may ask us to update or delete the information you have shared with us. For privacy questions, contact <a href="mailto:everbite.co.in@gmail.com">everbite.co.in@gmail.com</a>.</p>
-        </div>
-      </section>
-      <section id="contact" class="contact-section"><p class="eyebrow">LET'S TALK</p><h2>Have a bulk order<br />or a question?</h2><a class="button button-dark whatsapp-link" href="#">Chat on WhatsApp</a></section>
-    </main>
-
-    <aside class="cart-drawer" aria-label="Shopping bag" aria-hidden="true"><div class="cart-header"><h2>Your bag</h2><button class="close-cart" aria-label="Close cart">×</button></div><div id="cart-items" class="cart-items"></div><div class="cart-footer"><div><span>Total</span><strong id="cart-total">₹0</strong></div><button id="whatsapp-order" class="button button-dark">Order on WhatsApp ↗</button><small>Your order details will open in WhatsApp for confirmation.</small></div></aside>
-    <div class="backdrop"></div>
-    <footer>
-      <div class="footer-brand"><a class="footer-logo" href="#home"><img src="assets/images/everbite-logo.jpeg" alt="EverBite — Daily Dose of Wellness" /></a><p>Wholesome nuts, fruits and seeds for a better everyday ritual.</p></div>
-      <div class="footer-links"><h3>Quick links</h3><a href="#products">Shop all</a><a href="#privacy">Privacy Policy</a><a href="#custom-mix">Custom Mix</a><a href="#contact">Contact us</a></div>
-      <div class="footer-contact"><h3>Contact</h3><a href="mailto:everbite.co.in@gmail.com">everbite.co.in@gmail.com</a><a href="tel:+917981951987">+91 79819 51987</a><p>© <span id="year"></span> EverBite. All rights reserved.</p></div>
-    </footer>
-    <script src="app.js"></script>
-  </body>
 </html>

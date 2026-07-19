@@ -9,7 +9,6 @@ async function initialise(){
   // Preselect a sensible starting quantity without placing anything in the bag.
   data.featuredMixes.filter(item => !item.comingSoon).forEach(item => productSelections[item.id] = {quantity:1});
   data.ingredients.forEach(item => productSelections[`single:${item.id}`] = {size:250,quantity:1});
-  document.querySelector('.hero-actions .button').textContent = 'Shop now';
   document.querySelector('.catalogue-heading')?.remove();
   document.querySelector('.minimum-note').textContent = 'Add any ingredients you like. Your total weight and price update as you build.';
   addCustomQuantityControls(); renderProducts(); renderMixer(); renderCart(); bindInterface();
