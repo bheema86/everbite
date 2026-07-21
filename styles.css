@@ -53,9 +53,9 @@ footer{display:grid!important;grid-template-columns:1.25fr .7fr .9fr;gap:45px;pa
 
 /* Pack controls should size to their content rather than pushing the CTA into the card edge. */
 @media(min-width:681px){
-  :root .mix-card .purchase-area{display:flex!important;flex-wrap:wrap!important;justify-content:flex-start!important;gap:14px!important;padding-right:14px!important}
-  :root .mix-card .purchase-area .count-control{flex:0 0 auto!important}
-  :root .mix-card .purchase-area .add-button{flex:1 1 auto!important;min-width:110px!important;width:auto!important;justify-self:auto!important;margin:0!important;padding:10px 13px!important}
+  :root .mix-card .purchase-area,:root .product-card .purchase-area{display:flex!important;flex-wrap:wrap!important;justify-content:flex-start!important;gap:14px!important;padding-right:14px!important}
+  :root .mix-card .purchase-area .count-control,:root .product-card .purchase-area .count-control{flex:0 0 auto!important}
+  :root .mix-card .purchase-area .add-button,:root .product-card .purchase-area .add-button{flex:1 1 auto!important;min-width:110px!important;width:auto!important;justify-self:auto!important;margin:0!important;padding:10px 13px!important}
 }
 
 .mixer-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}.reset-mix{border:0;background:transparent;color:var(--wine);padding:10px 4px;font:700 12px "DM Sans",sans-serif;text-decoration:underline;cursor:pointer;white-space:nowrap}.reset-mix:disabled{opacity:.38;cursor:not-allowed;text-decoration:none}.mixer-actions .custom-buy-actions{width:auto!important}.mixer-actions .button{white-space:nowrap}
