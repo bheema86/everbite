@@ -102,3 +102,36 @@ footer{display:grid!important;grid-template-columns:1.25fr .7fr .9fr;gap:45px;pa
     height: auto;
     display: block;
 }
+.contact-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.contact-actions .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button-whatsapp {
+  background: #25D366;
+  color: #fff;
+  border: none;
+}
+
+.button-whatsapp:hover {
+  background: #1ebe5a;
+}
+
+.button-instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  border: none;
+}
+
+.button-instagram:hover {
+  opacity: 0.9;
+}

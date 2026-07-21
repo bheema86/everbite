@@ -41,7 +41,7 @@ function renderMixer(){
   document.querySelectorAll('[data-clear]').forEach(button=>button.addEventListener('click',()=>{mixSelections[button.dataset.clear]=0;renderMixer();})); updateMixTotal();
 }
 function updateMixTotal(){
-  const weight=data.ingredients.reduce((sum,item)=>sum+mixSelections[item.id]*item.unitWeightG,0), raw=data.ingredients.reduce((sum,item)=>sum+(mixSelections[item.id]*item.unitWeightG/1000*item.pricePerKg),0), protein=data.ingredients.reduce((sum,item)=>sum+(mixSelections[item.id]*item.unitWeightG*item.proteinPer100g/100),0), price=Math.round(raw*data.store.customMixMarkup);
+  const weight=data.ingredients.reduce((sum,item)=>sum+mixSelections[item.id]*item.unitWeightG,0), raw=data.ingredients.reduce((sum,item)=>sum+(mixSelections[item.id]*item.unitWeightG/1000*item.pricePerKg),0), protein=data.ingredients.reduce((sum,item)=>sum+(mixSelections[item.id]*item.unitWeightG*item.proteinPer100g/100),0), price=Math.ceil(raw*data.store.customMixMarkup*2)/2;
   byId('mix-weight').textContent=`${weight.toFixed(weight%1?2:0)} g`;byId('mix-price').textContent=money(price);byId('mix-protein').textContent=`${protein.toFixed(1)} g protein`;
   const button=byId('add-custom-mix'), resetButton=byId('reset-custom-mix');button.disabled=weight<=0;resetButton.disabled=weight<=0;button.onclick=()=>{const detail=data.ingredients.filter(item=>mixSelections[item.id]).map(item=>`${item.name} × ${mixSelections[item.id]}`).join(', ');addToCart({id:`custom:${detail}`,name:'Your custom mix',detail,price},customOrderQuantity);showToast('Custom mix added to bag');};
 }
