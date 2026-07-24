@@ -8,22 +8,33 @@
     "customMixStepGrams": 5
   },
   "featuredMixes": [
-    {"id":"elite-plus","name":"Elite Plus","tag":"The complete bite","price":49,"weight":45,"proteinGrams":7,"description":"Almonds, anjeer, walnut, cashews, pistachios, black raisins, Sunflower seeds and pumpkin seeds.","ingredients":"5 almonds \u00b7 1 anjeer \u00b7 1 walnut \u00b7 3 cashews \u00b7 4 pistachios"},
+    {"id":"elite-plus","name":"Elite Plus","tag":"The complete bite","price":49,"weight":45,"proteinGrams":7,"description":"Almonds, anjeer, dried cranberries, walnut, cashews, pistachios, black raisins, Sunflower seeds and pumpkin seeds.","ingredients":"5 almonds \u00b7 1 anjeer \u00b7 1 walnut \u00b7 3 cashews \u00b7 4 pistachios"},
     {"id":"daily-essentials","name":"Daily Essentials","tag":"Your daily reset","price":39,"weight":34,"proteinGrams":5,"description":"A balanced everyday mix of almonds, cashew, anjeer, raisins, Sunflower seeds and pumpkin seeds.","ingredients":"5 almonds \u00b7 4 cashews \u00b7 1 anjeer \u00b7 8 raisins"},
     {"id":"pocket-fuel","name":"Pocket Fuel","tag":"On-the-go energy","price":29,"weight":25,"proteinGrams":4,"description":"An easy, energising blend of almonds, cashew, raisins, Sunflower seeds and pumpkin seeds","ingredients":"5 almonds \u00b7 2 cashews \u00b7 12 raisins"},
     {"id":"berry-fusion","name":"Berry Fusion","tag":"Coming soon","price":0,"weight":0,"description":"A bright new blend is in the works. Watch this space.","ingredients":"Recipe coming soon","comingSoon":true}
   ],
   "ingredients": [
-    {"id":"cashew","name":"Cashews","pricePerKg":940,"unit":"piece","unitWeightG":1.25,"proteinPer100g":18,"icon":"\u25d2","image":"assets/images/cashew.jpg.jpeg"},
+    {"id":"cashew","name":"Cashews w210","pricePerKg":940,"unit":"piece","unitWeightG":1.25,"proteinPer100g":18,"icon":"\u25d2","image":"assets/images/cashew.jpg.jpeg"},
+    {"id":"cashewSplit","name":"Cashews Split","pricePerKg":860,"unit":"piece","unitWeightG":1.25,"proteinPer100g":18,"icon":"\u25d2","image":"assets/images/cashewsplit.jpeg","customMix":false},
+    {"id":"cashewSplit4k","name":"Cashews 4 piece","pricePerKg":780,"unit":"piece","unitWeightG":1.25,"proteinPer100g":18,"icon":"\u25d2","image":"assets/images/cashewsplit4k.jpeg","customMix":false},
     {"id":"almond","name":"Almonds","pricePerKg":980,"unit":"piece","unitWeightG":1.25,"proteinPer100g":21,"icon":"\u25d0","image":"assets/images/almond.jpg.jpeg"},
-    {"id":"walnut","name":"Walnuts","pricePerKg":1549,"unit":"piece","unitWeightG":4,"proteinPer100g":15,"icon":"\u25d4","image":"assets/images/walnut.jpg.jpeg"},
-    {"id":"anjeer","name":"Anjeer","pricePerKg":849,"unit":"piece","unitWeightG":9,"proteinPer100g":3,"icon":"\u25c9","image":"assets/images/anjeer.jpg.jpeg"},
-    {"id":"pista","name":"Pista Kernels","pricePerKg":2649,"unit":"piece","unitWeightG":1,"proteinPer100g":20,"icon":"\u25cc","image":"assets/images/pista.jpg.jpeg"},
+    {"id":"walnut","name":"Walnuts","pricePerKg":1560,"unit":"piece","unitWeightG":4,"proteinPer100g":15,"icon":"\u25d4","image":"assets/images/walnut.jpg.jpeg"},
+    {"id":"anjeer","name":"Anjeer","pricePerKg":880,"unit":"piece","unitWeightG":9,"proteinPer100g":3,"icon":"\u25c9","image":"assets/images/anjeer.jpg.jpeg"},
+    {"id":"pista","name":"Pista Kernels","pricePerKg":2600,"unit":"piece","unitWeightG":1,"proteinPer100g":20,"icon":"\u25cc","image":"assets/images/pista.jpg.jpeg"},
     {"id":"black-kismiss","name":"Black raisins","pricePerKg":560,"unit":"piece","unitWeightG":1,"proteinPer100g":3,"icon":"\u25cf","image":"assets/images/black-raisins.jpg.jpeg"},
     {"id":"sunflower","name":"Sunflower seeds","pricePerKg":280,"unit":"grams","unitWeightG":5,"proteinPer100g":21,"icon":"\u2726","image":"assets/images/sunflower-seeds.jpg.jpeg"},
     {"id":"pumpkin","name":"Pumpkin seeds","pricePerKg":540,"unit":"grams","unitWeightG":5,"proteinPer100g":30,"icon":"\u25c6","image":"assets/images/pumpkin-seeds.jpg.jpeg"},
     {"id":"flax","name":"Flax seeds","pricePerKg":220,"unit":"grams","unitWeightG":5,"proteinPer100g":18,"icon":"\u2727","image":"assets/images/flax-seeds.jpg.jpeg"},
     {"id":"chia","name":"Chia seeds","pricePerKg":400,"unit":"grams","unitWeightG":5,"proteinPer100g":17,"icon":"\u273a","image":"assets/images/chia-seeds.jpg.jpeg"},
-    {"id":"melon","name":"Melon seeds","pricePerKg":680,"unit":"grams","unitWeightG":5,"proteinPer100g":28,"icon":"\u2726","image":"assets/images/melon-seeds.jpg.jpeg"}
+    {"id":"melon","name":"Melon seeds","pricePerKg":680,"unit":"grams","unitWeightG":5,"proteinPer100g":28,"icon":"\u2726","image":"assets/images/melon-seeds.jpg.jpeg"},
+    {"id":"cranberry","name":"Dried Cranberry","pricePerKg":680,"unit":"piece","unitWeightG":1,"proteinPer100g":28,"icon":"\u2726","image":"assets/images/cranberry.jpeg"},
+    {"id":"blueberry","name":"Dried Blueberry","pricePerKg":1350,"unit":"piece","unitWeightG":1,"proteinPer100g":28,"icon":"\u2726","image":"assets/images/blueberry.jpeg"},
+    {"id":"kiwi","name":"Dried kiwi","pricePerKg":540,"unit":"grams","unitWeightG":5,"proteinPer100g":28,"icon":"\u2726","image":"assets/images/kiwi.jpeg","customMix":false},
+    {"id":"apricot","name":"Dried apricot","pricePerKg":1520,"unit":"grams","unitWeightG":5,"proteinPer100g":28,"icon":"\u2726","image":"assets/images/apricot.jpeg","customMix":false,"packWeight":200}
+  ],
+  "combos": [
+    {"id":"seeds-combo","name":"Seeds Explosion","description":"5 seeds \u2014 sunflower, pumpkin, flax, chia and melon \u2014 each 250g pack.","image":"assets/images/seedscombo.jpeg","weight":1250,"price":500,"proteinGrams":23},
+    {"id":"cashew-whole-badam","name":"Whole & Badam dual","description":"Cashew jumbo whole & \u2014 Premium Badam ","image":"assets/images/kajuBadamCombo.jpeg","weight":1000,"price":950,"proteinGrams":23},
+    {"id":"cashew-split-badam","name":"Splits & Badam dual","description":"Cashew splits & \u2014 Premium Badam","image":"assets/images/splitkajuBadamCombo.jpeg","weight":1000,"price":910,"proteinGrams":23}
   ]
 }
